@@ -1,0 +1,131 @@
+@import "./variables";
+@import "./header";
+
+@mixin addDebugBorders() {
+  //  border: 1px solid magenta;
+} 
+
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.container {
+    background: url("../milad-b-fakurian-IQN_eAgUyI4-unsplash.jpg");
+    background-position: -100px -400px; 
+
+    background-size: 150% 150%;
+   // background: blue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+     
+    @include addDebugBorders();
+}
+
+.container-numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 90%;
+    max-width: 900px;
+    justify-content: space-between;
+    flex-grow: 1;
+
+    span {
+        display: block;
+    }
+
+    .number {
+        @include addDebugBorders();
+        font-size: 5rem;
+        font-weight: 500;
+        text-align: center;
+        
+    }
+
+    .unit {
+        font-size: 1.5rem;
+        font-weight: 400;
+        font-family: 'Dancing Script', cursive;
+    }
+}
+
+.quote {
+    margin-top: 2em;
+    min-height: 200px;
+    max-width: 1200px;
+    @include addDebugBorders();
+    font-weight: 700;
+    font-size:4rem;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container-numbers {
+
+    
+    @include addDebugBorders();
+}
+
+footer {
+     min-height: 100px;
+     width: 100%;
+     text-align: center;
+    @include addDebugBorders();
+    background-color: rgba(27, 27, 27, 0.01);
+    padding: 3em;
+    p {
+        margin: 0px;
+        
+    }
+}
