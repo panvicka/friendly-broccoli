@@ -1,8 +1,9 @@
 @import "./variables";
 @import "./header";
 
+
 @mixin addDebugBorders() {
-  //  border: 1px solid magenta;
+   // border: 2px solid magenta;
 } 
 
 * {
@@ -39,7 +40,15 @@ body {
     flex-direction: row;
     width: 90%;
     max-width: 900px;
-    justify-content: space-between;
+    margin-bottom: 10em;
+    justify-content: space-evenly;
+    transition: all 5s linear;
+    -webkit-transition: all .3s ease .15s;
+    -moz-transition: all .3s ease .15s;
+    -o-transition: all .3s ease .15s;
+    -ms-transition: all .3s ease .15s;
+    transition: all .3s ease .15s;
+
     flex-grow: 1;
 
     span {
@@ -51,8 +60,27 @@ body {
         font-size: 5rem;
         font-weight: 500;
         text-align: center;
-        
+        height: 1em;
+        float: left;
+        min-width: 150px;
+  
+       
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
     }
+
+    .hide {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+    }
+
+  
 
     .unit {
         font-size: 1.5rem;
@@ -62,7 +90,7 @@ body {
 }
 
 .quote {
-    margin-top: 2em;
+    margin-top: 0.5em;
     min-height: 200px;
     max-width: 1200px;
     @include addDebugBorders();
@@ -118,14 +146,20 @@ body {
 }
 
 footer {
-     min-height: 100px;
-     width: 100%;
-     text-align: center;
-    @include addDebugBorders();
-    background-color: rgba(27, 27, 27, 0.01);
+    min-height: 150px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(#000, .2), 
+    2px 2px 17px rgba(#000, .35), 
+    2px 2px 25px rgba(#000, .5);
+    background-color: rgba(172, 167, 167, 0.555);
     padding: 3em;
     p {
         margin: 0px;
         
     }
-}
+
+    a {
+        color:black;
+    }
+ }

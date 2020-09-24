@@ -1,32 +1,13 @@
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: red;
-  height: 100vh;
+footer {
+  min-height: 150px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(31, 25, 25, 0.37);
+  padding: 3em;
 }
 
-header button {
-  background: #1474e0;
-}
-
-header button:hover {
-  background: red;
-}
-
-header button::after {
-  content: "helllooooo";
+footer p {
+  margin: 0px;
 }
 
 * {
@@ -78,9 +59,14 @@ body {
           flex-direction: row;
   width: 90%;
   max-width: 900px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  margin-bottom: 10em;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-transition: all 5s linear;
+  transition: all 5s linear;
+  -webkit-transition: all .3s ease .15s;
+  transition: all .3s ease .15s;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -94,6 +80,20 @@ body {
   font-size: 5rem;
   font-weight: 500;
   text-align: center;
+  height: 1em;
+  float: left;
+  min-width: 150px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.container-numbers .hide {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
 }
 
 .container-numbers .unit {
@@ -103,7 +103,7 @@ body {
 }
 
 .quote {
-  margin-top: 2em;
+  margin-top: 0.5em;
   min-height: 200px;
   max-width: 1200px;
   font-weight: 700;
@@ -139,14 +139,20 @@ body {
 }
 
 footer {
-  min-height: 100px;
+  min-height: 150px;
   width: 100%;
   text-align: center;
-  background-color: rgba(27, 27, 27, 0.01);
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), 2px 2px 17px rgba(0, 0, 0, 0.35), 2px 2px 25px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), 2px 2px 17px rgba(0, 0, 0, 0.35), 2px 2px 25px rgba(0, 0, 0, 0.5);
+  background-color: rgba(172, 167, 167, 0.555);
   padding: 3em;
 }
 
 footer p {
   margin: 0px;
+}
+
+footer a {
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */
