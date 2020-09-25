@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div hidden id="spinner"></div>
+        <div class="quiz hidden">
+
+            <div class="question-title">
+                <div id="span" class="question-number"> </div>
+
+
+
+            </div>
+            
+            <div class="question-body">
+                
+            </div>
+
+            <div class="options">
+
+                <form name="options-form">
+                    <ul class ="radio radio__input"> 
+                        <li><input type="radio" name="choice" value="choice-one"> <label for="choice-one"> </label></li>
+                        <li><input type="radio" name="choice" value="choice-two"> <label for="choice-two"> </label></li>
+                        <li><input type="radio" name="choice" value="choice-three"> <label for="choice-three"> </label></li>
+                        <li><input type="radio" name="choice" value="choice-four"> <label for="choice-four"> </label></li>
+                    </ul>
+
+                </form>
+
+            </div> 
+
+            <button class="submit-btn"><i class="fas fa-arrow-right"> </i></button>
+             
+
+            <span class="warning-no-selected hidden">choose one answer!</span>
+
+        </div>
+
+
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
