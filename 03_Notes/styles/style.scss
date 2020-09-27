@@ -1,9 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+
+
 @mixin addDebugBorders() {
-      border: 2px solid magenta;
+    //  border: 2px solid magenta;
    } 
 
 * {
     box-sizing: border-box;
+    
+}
+
+html,
+body {
+    font-family: 'Indie Flower', cursive;
+    background: url("https://i.imgur.com/TWBsb83.png");
+}
+
+a {
+    text-decoration: underline;
+    color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+nav p{
+  margin: 0px;
+  padding: 0px;
+    
 }
 
 .container {
@@ -11,17 +39,24 @@
     grid-gap: 20px;
     @include addDebugBorders();
     grid-template-columns: repeat(auto-fill, 400px);
+    transition: 1s linear all;
+    justify-content: start;
+    align-content: center;
 }
 
 .item {
     @include addDebugBorders();
-   height: 300px;
+    height: 300px;
+    border: 5px solid rgba(84,84,84,0.58);
+    border-radius: 40px 40px 40px 40px;
+    padding: 1em;
    
 }
 
 .item-nav {
     @include addDebugBorders();
     width: 100%;
+    border-bottom: 2px solid rgba(77, 77, 77, 0.507);
 }
 
 nav {
@@ -31,7 +66,15 @@ nav {
 
 .delete-note-btn {
     background-color: red;
-    float: right;
+   
+
+    &:active {
+        outline: none
+    }
+
+    &:active {
+        outline: none
+    }
 }
 
 textarea {
@@ -39,9 +82,61 @@ textarea {
      height: 90%;
     resize: none;
     display:table-cell;
-    background-color: rgb(240, 234, 234);
+    background-color: rgba(240, 234, 234, 0.192);
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.2rem;
+    padding: 1em;
+    border: none;
+    
+
+
+
+    &:active, &:focus {
+        outline: none;
+        background: rgba(155, 154, 154, 0.164); 
+        
+        border: 1px solid rgba(155, 154, 154, 0);
+        border-radius: 40px 40px 40px 40px;
+    }
 }
 
-.delete-note-btn:after {
-    content: 'delete note';
-  }
+
+.item button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1.2rem;
+    float: right;
+    transition: 0.3s linear all;
+    &:hover {
+        color:rgb(206, 63, 63);
+    }
+
+    
+    &:active {
+        outline: none
+    }
+}
+
+nav button {
+    border: none;
+    background: transparent;
+    font-size: 2rem;
+    margin: 0.3em;
+    cursor: pointer;
+    font-family: 'Indie Flower', cursive;
+    transition: 0.3s linear all;
+
+    &.new:hover {
+        color: rgb(37, 175, 37);
+    }
+    &.delete:hover {
+        color:rgb(206, 63, 63);
+    }
+    
+    &:active, &:focus {
+        outline: none
+
+    }
+ }
+ 

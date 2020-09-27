@@ -14,6 +14,11 @@ function pad(n) {
     return (n < 10) ? ("0" + n) : n;
 }
 
+function readableTime(time) {
+ 
+    return readable = time.replace('T', ' ').slice(0, -5);
+}
+
 class Note {
     constructor(id, text = "", date = new Date().toISOString()) {
         this.id = id;
@@ -26,12 +31,14 @@ class Note {
         const div_text = document.createElement("textarea");
         const deleteBtn = document.createElement("button");
         deleteBtn.className = `delete-note-btn ${this.id}`;
+        deleteBtn.innerHTML = `<i class="far fa-trash-alt"></i>`;
         div_text.className = `${this.id}`;
         div_text.value = `${this.text}`;
+        div_text.placeholder = `Write you note here...`
 
         div.className = `item ${this.id}`;
         div_info.className = "item-nav";
-        div_info.innerHTML = `created at ${this.date} `;
+        div_info.innerHTML = `created at ${readableTime(this.date)} `;
         div.appendChild(div_info);
         div.appendChild(div_text);
         div_info.appendChild(deleteBtn);
@@ -95,8 +102,8 @@ function deleteOneNote(idToDelete) {
 
 function tryTodelete(e) {
     console.log(e);
-    if (e.srcElement.classList[0] === "delete-note-btn") {
-        const idToDelete = e.srcElement.classList[1];
+    if (e.path[1].classList[0] === "delete-note-btn") {
+        const idToDelete = e.path[1].classList[1];
         deleteOneNote(idToDelete)
 
     }
